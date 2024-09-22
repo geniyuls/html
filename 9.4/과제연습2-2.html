@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>https://maplestory.nexon.com/Authentication/Login</title>
+    <style>
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        img {
+            filter: brightness(100%);
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
+
+        table {
+            color: white;
+            z-index: 2;
+            font-size: 20px;
+        }
+        form{
+            left: 50%;
+            position: absolute;
+            top: 5rem;
+            transform: translateX(-50%);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;}
+
+        td {
+            vertical-align: center;
+        }
+
+        input {
+            width: 445px;
+            height: 60px;
+            background-color: #201b1b;
+            border: #201b1b;
+            color: white;
+
+        }
+
+        button {
+            color: white;
+            font-size: 30px;
+            width: 545px;
+            background-color: #168ee6;
+            height: 70px;
+        }
+        div{
+            display: flex;
+            color: white;
+            z-index: 2;
+            font-size: 20px;
+
+        }
+        .container {
+            display: flex;}
+
+    </style>
+</head>
+<body>
+<img src="./메이플%20배경.png" alt="메이플배경" style="width: 100vw; height: 110vh; top: 0; left: 0;
+            position: absolute;">
+
+<form>
+    <h1 style="padding-bottom: 25px">메이플스토리 로그인</h1>
+    <div class="container">
+    <a href="./과제연습2-1.html"><img src="./넥슨이메일ID2.png" alt="넥슨이메일id2" style=" width: 272px;"></a>
+    <a href="./과제연습2-2.html"><img src="./메이플ID2.png" alt="메이플Id2" style=" width: 272px;"></a>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <label>
+                    <input type="email" name="email" required placeholder="넥슨이메일ID">
+                </label>
+            </td>
+            <td style="font-size: 10px; background-color: #201b1b; vertical-align: middle; text-align: center;">
+                <label>
+                    <input name="remember" type="checkbox" style="width: 50px; height: 50px; padding-left:0">ID저장
+                </label>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td rowspan="2">
+                <label>
+                    <input type="email" name="email" required placeholder="PW" style="width: 538px;">
+                </label>
+            </td>
+        </tr>
+    </table>
+    <button>로그인</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round Checkbox with Grid</title>
+  <style>
+    .checkbox-container {
+      display: grid;
+      cursor: pointer;
+      margin-top: 500px; /* 체크박스를 500px 아래로 이동 */
+      margin-left: 1000px;
+    }
+    .checkbox {
+      display: none;
+    }
+    .custom-checkbox {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #333;
+      border-radius: 50%; /* 둥글게 만들기 */
+      position: relative;
+    }
+    .custom-checkbox::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      width: 10px;
+      height: 5px;
+      border: solid #333;
+      border-width: 0 0 2px 2px;
+      transform: rotate(318deg);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .checkbox:checked + .custom-checkbox::after {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+<form>
+  <label class="checkbox-container">
+    <input class="checkbox" type="checkbox">
+    <span class="custom-checkbox"></span>
+    <span>체크박스</span>
+  </label>
+</form>
+</body>
+</html>

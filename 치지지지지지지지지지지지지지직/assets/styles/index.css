@@ -1,0 +1,9 @@
+@import "./index/header.css";
+@import "./index/nav.css";
+@import "./index/main.css";
+
+:root {
+    --header-height: 3.75rem;
+    --nav-width: 15rem;
+    --nav-width-mobile: 4.875rem;
+}

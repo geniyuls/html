@@ -1,0 +1,25 @@
+@charset "UTF-8";
+table {
+    width: 500px;
+    margin : 0 auto;
+    border-collapse : collapse;
+    text-align:center;
+}
+th {
+    border: 1px solid #999999;
+    border-right : 0px;
+}
+th:nth-child(1){
+    border-left : 0px;
+}
+tr:nth-child(1) {
+    border: 5px solid #000000;
+    border-left : 0px;
+    border-right : 0px;
+}
+td {
+    border: 1px solid #999999;
+    width: calc(100% / 5);
+    text-align: right;
+    border-right: 0px;
+}

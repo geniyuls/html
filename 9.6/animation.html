@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes anim-child {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+        div:active {
+            animation: paused;
+        }
+
+        .parent {
+            width: 800px;
+            height: 300px;
+            background-color: #ffa0a5;
+        }
+
+        .parent > .child {
+            width: 75px;
+            aspect-ratio: 1/1;
+            animation-duration: 1s;
+            background-color: #a0b0ff;
+            animation-name: anim-child;
+            position: relative;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        /*cubic-bezier(1, .1, 1, -0.15);*/
+    </style>
+</head>
+<body>
+
+<div class="parent">
+    <div class="child"></div>
+</div>
+
+</body>
+</html>
+<!--
+@keyframes는 css에서 애니메이션을 작성하기 위해 사용하는 쿼리로,  from부터 to까지 혹은 0%부터 100% 까지 (이때 중간값 사용 가능), 애니메이션의 한 사이클에 대한 내용을 담는다.
+작성 예시는 아래와 같다.
+@keyframes [애니메이션 이름]{
+    from{
+        ...
+        }
+    to {
+        ...
+        }
+    }
+
+animation-delay 속성은 애니메이션의 최초 사이클이 시작되기 전 지연시킬 시간을 지정한다. 사이클 간의 시간에는 영향을 미치지 않는다.
+기본 값: 0
+값
+-시간 값
+
+animation-duration 속성은 한 사이클이 완성되는데 걸리는 시간을 지정하기 위한 속성이다.
+값
+-시간 값
+
+animation-iteration-count 속성은 애니메이션의 반복 횟수를 지정하기 위해 사용한다.
+기본 값: 1
+값
+- 자연수: 반복 횟수를 수동으로 지정한다.
+-infinite : 무한히 반복한다.
+
+animation-name 속성은 @keyframes 쿼리에서 작성한 애니메이션 이름을 값으로 사용하여 선택자에 의해 선택된 요소에 애니메이션을 적용한다.
+기본 값 none
+값
+- none: 애니메니션 없음
+- 애니메이션 이름
+
+animation-play-state 속성은 애니메이션 재생 상태를 지정하기 위해 사용한다.
+기본 값 : running
+값
+-running: 애니메이션 재생
+-paused : 애니메이션 일시 중지
+
+animation-timing-function 속성은 애니메이션이 적용되는데 있어, 시간의 흐름에 따른 사이클 완료율을 계산하는 함수를 지정하기 위한 속성이다.
+기본 값: ease
+값
+- ease
+- ease-in
+- ease-in-out
+- ease-out
+- linear
+- cubic-bezier 함수: 사용자 정의 베지에 곡선 함수
+-->

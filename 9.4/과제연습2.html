@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>https://maplestory.nexon.com/Authentication/Login</title>
+    <style>
+        h1 {
+            top: 10%;
+            left: 40%;
+            color: white;
+            margin-block: initial;
+            margin-inline: initial;
+            position: absolute;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        img {
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            filter: brightness(100%);
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            z-index: 1;
+        }
+
+        table {
+            top: 20%;
+            left: 33.5%;
+            color: white;
+            margin-block: initial;
+            margin-inline: initial;
+            position: absolute;
+            transform: translateY(-50%);
+            z-index: 2;
+            font-size: 20px;
+        }
+
+        td {
+            vertical-align: center;
+        }
+
+        input {
+            width: 445px;
+            height: 60px;
+            background-color: #201b1b;
+            border: #201b1b;
+            color: white;
+
+        }
+
+        button {
+            top: 45%;
+            left: 33.5%;
+            color: white;
+            margin-block: initial;
+            margin-inline: initial;
+            position: absolute;
+            transform: translateY(-50%);
+            z-index: 2;
+            font-size: 30px;
+            width: 545px;
+            background-color: #168ee6;
+            height: 70px;
+        }
+        div{
+            top: 20%;
+            left: 33.5%;
+            color: white;
+            margin-block: initial;
+            margin-inline: initial;
+            position: absolute;
+            transform: translateY(-50%);
+            z-index: 2;
+            font-size: 20px;
+
+        }
+
+    </style>
+</head>
+<body>
+<img src="./메이플%20배경.png" alt="메이플배경">
+<h1>메이플스토리 로그인</h1>
+<form>
+    <table>
+        <tr>
+            <a href="./과제연습2.html">
+                <td style="border: 1px solid #168ee6; padding: 20px 60px; background-color: #168ee6; width: 150px">
+                    넥슨이메일 ID
+                </td>
+            </a>
+            <td style="border-bottom: 1px solid #168ee6; padding: 20px 60px; background-color: #201b1b; width: 150px">
+                메이플 ID
+            </td>
+        </tr>
+    </table>
+    <table style="top: 30%; left: 33.5%;">
+        <tr>
+            <td>
+                <label>
+                    <input type="email" name="email" required placeholder="넥슨이메일ID">
+                </label>
+            </td>
+            <td style="font-size: 10px; background-color: #201b1b; vertical-align: middle; text-align: center;">
+                <label>
+                    <input name="remember" type="checkbox" style="width: 50px; height: 50px; padding-left:0">ID저장
+                </label>
+            </td>
+        </tr>
+    </table>
+    <table style="top: 37%; left: 33.5%;">
+        <tr>
+            <td rowspan="2">
+                <label>
+                    <input type="email" name="email" required placeholder="PW" style="width: 538px;">
+                </label>
+            </td>
+        </tr>
+    </table>
+    <button>로그인</button>
+</form>
+<form>
+    <div></div>
+    <label>
+        이메일 <input type="email" name="email" required maxlength="50" min="10" autofocus placeholder="이메일을 입력해 주세요.">
+    </label>
+</form>
+
+</body>
+</html>

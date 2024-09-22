@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    h1 {
+        top: 50%;
+        left: 10rem;
+        color: white;
+        font-size: 5rem;
+        line-height: 137%;
+        margin-block: initial;
+        margin-inline: initial;
+        position: absolute;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+    video {
+        top : 0;
+        left : 0;
+        width : 100vw;
+        height: 100vh;
+        filter : brightness(50%);
+        object-fit : cover;
+        object-position: center;
+        position: absolute;
+        z-index: 1;
+    }
+</style>
+
+<h1>안녕하세요? 김종율입니다. <br>반가워요.</h1>
+<vIDEO autoplay loop muted src="video.mp4"></vIDEO>
+
+</body>
+</html>
+
+<!--<vIDEO controls src="video.mp4" style="width: 40rem;"></vIDEO>-->
+
+video 태그는 영상을 삽입하기 위해 사용한다.
+자동으로 닫는 태그x
+시멘틱 o
+속성
+autoplay 페이지가 로드되었을 때, 자동으로 재생할 것인가에 대한 속성이다. 속성 값을 가지지 않는다. 단, 브라우저 설정에 따라 mutde 속성이 함께 부여되어 있지 않을 경우 무시될 수도 있음으로 유의한다.
+controls 볼륨 조절, 재생 및 일시정지, 장면 탐색 등을 할 수 있는 기능을 활성화 할 것인가에 대한 속성이다. 속성 값을 가지지 않는다.
+loop 반복 재생할 것인가에 대한 속성이다. 속성 값을 가지지 않는다.
+muted 초기 상태로 음소거 할 것인가에 대한 속성이다. 속성 값을 가지지 않는다.
+src 리소스의 주소 및 경로. 단, 해당 태그가 자식으로 한 개 이상의 source 태그를 가진다면 생략할 수 있다.
+
+audio 태그는 오디오를 삽입하기 위해 사용한다.
+자동으로 닫는 태그x
+시멘틱 o
+속성
+autoplay 페이지가 로드되었을 때, 자동으로 재생할 것인가에 대한 속성이다. 속성 값을 가지지 않는다. 단, 브라우저 설정에 따라 mutde 속성이 함께 부여되어 있지 않을 경우 무시될 수도 있음으로 유의한다.
+controls 볼륨 조절, 재생 및 일시정지 등을 할 수 있는 기능을 활성화 할 것인가에 대한 속성이다. 속성 값을 가지지 않는다.
+loop 반복 재생할 것인가에 대한 속성이다. 속성 값을 가지지 않는다.
+muted 초기 상태로 음소거 할 것인가에 대한 속성이다. 속성 값을 가지지 않는다.
+src 리소스의 주소 및 경로. 단, 해당 태그가 자식으로 한 개 이상의 source 태그를 가진다면 생략할 수 있다.
+
+source 태그는 audio 혹은 video 태그가 한 개 이상의 리소스를 재생 목록으로 가져야 할 떄 사용한다.
+단, loop 등에 의해 source 순환 반복되지는 않음에 유의한다.
+자동으로 닫는 태그o
+시멘틱 o
+속성
+src 리소스의 주소 및 경로

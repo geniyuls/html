@@ -1,0 +1,43 @@
+/*body {*/
+/*    top:50%;*/
+/*    left:50%;*/
+/*    transform:translate(-50%, -50%);*/
+/*    position: absolute;*/
+/*}*/
+* {
+    box-sizing: border-box;
+}
+body {
+    list-style-type: none;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+}
+
+.login {
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    position: absolute;
+    width: 32rem;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    border: 0.0625rem solid black;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    width: 100%;
+}
+
+.login > label > .aaa {
+    width: 100%;
+    border: 0.1rem solid #000000;
+}
+
+.login > button {
+    width: 100%;
+}

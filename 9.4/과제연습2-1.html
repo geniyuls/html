@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>https://maplestory.nexon.com/Authentication/Login</title>
+    <style>
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        ul {
+            color: white;
+            text-align: center;
+        }
+
+        img {
+            filter: brightness(100%);
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
+
+        table {
+            color: white;
+            z-index: 2;
+            font-size: 20px;
+            border-collapse: collapse;
+        }
+
+        form {
+            left: 50%;
+            position: absolute;
+            top: 5rem;
+            transform: translateX(-50%);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+        }
+
+        td {
+            vertical-align: center;
+        }
+
+        input {
+            width: 445px;
+            height: 60px;
+            background-color: #201b1b;
+            color: white;
+        }
+
+        button {
+            color: white;
+            font-size: 30px;
+            width: 545px;
+            background-color: #168ee6;
+            height: 70px;
+        }
+
+        div {
+            color: white;
+            font-size: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            display: inline;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center; /* 세로 중앙 정렬 */
+            justify-content: center; /* 가로 중앙 정렬 */
+        }
+
+        .line-container hr {
+            border: none;
+            border-top: 1px solid black; /* 선 스타일 */
+            margin: 0 10px; /* 선과 텍스트 사이의 간격 */
+        }
+
+        .line-container span {
+            white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+        }
+
+        .login-container {
+            filter: brightness(100%);
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .checkbox {
+            display: none;
+        }
+        .custom-checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #333;
+            border-radius: 50%; /* 둥글게 만들기 */
+            position: relative;
+        }
+        .custom-checkbox::after {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            width: 10px;
+            height: 5px;
+            border: solid #f1f1f1;
+            border-width: 0 0 2px 2px;
+            transform: rotate(318deg);
+            opacity: 0;
+            transition: opacity 0.2s;
+            display: flex;
+        }
+        .checkbox:checked + .custom-checkbox::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<img src="./메이플%20배경.png" alt="메이플배경" style="width: 100vw; height: 110vh; top: 0; left: 0;
+            position: absolute;">
+
+<form>
+    <h1 style="padding-bottom: 25px">메이플스토리 로그인</h1>
+    <div class="container">
+        <a href="./과제연습2-1.html"><img src="./넥슨이메일ID.png" alt="넥슨이메일id" style=" width: 272px;"></a>
+        <a href="./과제연습2-2.html"><img src="./메이플ID.png" alt="메이플Id" style=" width: 272px;"></a>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <label>
+                    <input type="email" name="email" required placeholder="넥슨이메일ID">
+                </label>
+            </td>
+            <td style="font-size: 10px; background-color: #201b1b; vertical-align: middle; text-align: center; padding: 17px;">
+                    <label class="checkbox-container">
+                        <input class="checkbox" type="checkbox">
+                        <span class="custom-checkbox"></span>
+                        &nbsp&nbsp<span> ID저장</span>
+                </label>
+            </td>
+        </tr>
+    </table>
+    <div></div>
+    <table>
+        <tr>
+            <td rowspan="2">
+                <label>
+                    <input type="password" name="password" required placeholder="PW" style="width: 538px;">
+                </label>
+            </td>
+        </tr>
+    </table>
+    <button>로그인</button>
+    <div>
+        <ul>
+            <li><a href="#" style="color: #999999; text-decoration: none;">메이플ID찾기</a></li>
+            &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+            <li><a href="#" style="color: #999999; text-decoration: none;">비밀번호 찾기</a></li>
+            &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+            <li><a href="#" style="color: #999999; text-decoration: none;">이메일 전환</a></li>
+            &nbsp&nbsp&nbsp&nbsp
+        </ul>
+    </div>
+    <div class="line-container">
+        <hr style="width: 230px; border: 1px solid #999999">
+        또는
+        <hr style=" width: 230px; border: 1px solid #999999">
+    </div>
+    <table class="login-container">
+        <tr>
+            <td>
+                <a href="#"><img src="./face%20로그인.png" alt="face로그인" style="width: 270px"></a>
+            </td>
+            <td>
+                <a href="#"><img src="./구글%20로그인.png" alt="구글로그인" style="width: 270px"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#"><img src="./네이버로그인.png" alt="네이버로그인" style="width: 270px"></a>
+            </td>
+            <td>
+                <a href="#"><img src="./애플로그인.png" alt="애플로그인" style="width: 270px"></a>
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*.px-box {
+              width: 160px;
+              height: 160px;
+              background-color: red;
+            }
+            .rem-box{
+              width: 10rem;
+              height: 10rem;
+              background-color: blue;
+            } */
+        /*.box {
+            width: 50vw;
+            height: 50vh;
+            background-color: #fe6060;
+        }*/
+        /*.box-a {
+            width: 20rem;
+            height: 5rem;
+            background-color: #fe6060;
+            margin: 0 0 5rem 0 = margin-bottom;
+        }
+        .box-b {
+            width: 20rem;
+            height: 5rem;
+            background-color: #60a0ff;
+            margin: 5rem 0 0 0 = margin-top;
+        }*/
+        /*.m {
+            width: 20rem;
+            height: 10rem;
+            background-color: #fe6060;
+            margin: 10rem;
+        }
+
+        .p {
+            width: 20rem;
+            height: 10rem;
+            background-color: #60a0fe;
+            padding: 10rem;
+        }
+
+        div:hover {
+            background-color: black;
+        } margin은 배경x padding은 배경o */
+        /*.a {
+            width: 10rem;
+            height: 10rem;
+            background-color: #fe6060;
+            font-size : 2rem;
+        }
+        .b {
+            width: 10rem;
+            height: 10rem;
+            padding: 2rem;
+            background-color: #60a0fe;
+            font-size : 2rem;
+            border: 2rem solid black;
+            box-sizing: border-box; 패딩이 테두리 포함 padding 2rem=border 2rem
+        }*/
+        /*.a {
+            width: 5rem;
+            height: 5rem;
+            background-color: #e0e0e0;
+            box-shadow : 0 0 0.25rem 0.0625rem #00000060; x오프셋 x만큼 오른쪽 이동, y오프셋 y큼 아래로이동
+            font-size: 2rem;
+            transition-duration: 250ms;
+            transition-property: box-shadow;
+        }
+        .a:hover { box-shadow: 0 0 0.5rem 0.0625rem #00000050;} */
+
+        /*.b {
+            width: 10rem;
+            height: 10rem;
+            padding: 2rem;
+            background-color: #60a0fe;
+            font-size : 2rem;
+            border: 2rem solid black;
+            box-sizing: border-box; 패딩이 테두리 포함 padding 2rem=border 2rem */
+        /*.a {
+            width: 5rem;
+            height: 5rem;
+            background-color: #fe6060;
+            top : 5rem;
+            position : fixed; aside
+        }
+        .b {
+            width: 5rem;
+            height: 5rem;
+            background-color: #fe6060;
+            top : 1000rem;
+            position : absolute;
+        }*/
+        /*.a {
+            width: 15rem;
+            height: 15rem;
+            background-color: #ffa0a0;
+            position: relative;
+        }
+
+        .b {
+            top: 0;
+            left: 0;
+            width: 5rem;
+            height: 5rem;
+            background-color: #a0f0ff;
+            position: absolute;
+        }
+        <div class="a">123
+            <div class="b">456</div>
+        </div>로 했을때.*/
+        /*.button {*/
+        /*    background-color: #000000;*/
+        /*    color: #ffffff;*/
+        /*    padding: 0.75rem 1.25rem;*/
+        /*    cursor: pointer;*/
+        /*    display: inline-block;*/
+        /*    border: 0.2rem solid #000000;*/
+        /*    border-radius: 0 0 0 3rem;*/
+        /*}*/
+
+        /*.button:hover {*/
+        /*    border: 0.2rem solid #000000;*/
+        /*    background-color: #ffffff;*/
+        /*    color: #000000;*/
+        /*}*/
+        /*.r {*/
+        /*    width: 5rem;*/
+        /*    height: 5rem;*/
+        /*    background-color: #98b7d6;*/
+        /*    border-radius: 0 0 0 50%;}*/
+        /*.image {
+            width: 40rem;
+        }
+
+        .image:active {
+            filter: blur(1rem) brightness(50%)}*/
+        /*.image:active {
+            filter: blur(1rem)
+            filter: brightness(50%)
+        } 로 하면 밑에 꺼만됨.
+            .image {
+            width: 40rem
+            filter: brightness(50%)}
+           .image:active {
+            filter: blur(1rem) brightness(50%)} 로 해도 밑에꺼(image:active꺼) 만됨*/
+        image {
+            width: 40rem;
+        }
+
+        /*.image:active {*/
+        /*    filter: grayscale(100%)}*/
+        @keyframes anim-hue {
+            from {
+                filter: hue-rotate(0deg)
+            }
+            to {
+                filter: hue-rotate(360deg
+                )
+            }
+        }
+
+        /*.image:active {*/
+        /*    animation-name: anim-hue;*/
+        /*    animation-duration: 1s;*/
+        /*    animation-iteration-count: infinite;*/
+        /*    animation-timing-function: linear;*/
+        /*}*/
+        .image:active {
+            /*filter: opacity(50%);*/
+            /*filter: brightness(95%) saturate(125%)*/
+            filter: sepia(100%)
+        }
+
+    </style>
+</head>
+<body>
+<!--<div class="px-box"></div>
+<div class="rem-box"></div> -->
+<!--<div class="a">123
+    <div class="b">456</div>
+</div>-->
+<!--<div class="button">Click Me!</div>-->
+<!--<div class="r">!</div>-->
+<img alt="스파크 낙서 애디션" class="image"
+     src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Ft1.daumcdn.net%2Fcafeattach%2F1IHuH%2Fb23b006f6bbb44c613c345b284e2cad84c161298&type=sc960_832"
+     ;>
+</body>
+</html>
+
+<!--
+크기 단위
+% : (주로) 부모에 대한 비율 단위
+px : (pixel) 픽셀 단위
+1px=0.0625rem
+em : 요소 폰드 크기(Element Font Size) 단위. 요소가 가지고 있는 폰트 크기(font-size) 속성 값을 1로 표현한 단위이다.
+rem : 루트 요소 폰트 크기(Root Element Font Size) 단위. 최상위 태그가 가지고 있는 폰트 크기(font-size) 속성 값을 1로 표현한 단위
+1rem(가변적)=16px(고정값)
+vw : 뷰포트 가로 크기(Viewport Width)에 대한비율 단위. 100vw 는 화면을 표시하고 있는 뷰포트(주로 브라우저나 모바일 기기)의 가로 크기와 같다.
+vh : 뷰포트 가로 크기(Viewport Height)에 대한비율 단위. 100vh 는 화면을 표시하고 있는 뷰포트(주로 브라우저나 모바일 기기)의 세로 크기와 같다.
+margin : margin 속성은 요소의 외부 여백을 지정하기 위한 속성이다.
+값 : 크기 값
+형태
+-a : 모든 방향에 a를 적용한다
+-a b : 상,하 방향에 a를 좌,우 방향에 b를 적용한다.
+-a b c d : 상, 우, 하, 좌
+플로우 컨텐츠의 상측, 하측 margin을 사용할 경우 인접한 형제간에 마진 상쇄가 발생할 수 있음으로 유의한다.
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+padding 속성은 요소의 내부 여백을 지정하기 위한 속성이다.
+값 : 크기 값
+형태
+-a : 모든 방향에 a를 적용한다
+-a b : 상,하 방향에 a를 좌,우 방향에 b를 적용한다.
+-a b c d : 상, 우, 하, 좌
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+box-sizing  속성은 요소의 크기(width, height)를 정할때의 기준을 설정하기 위한 속성이다.
+기본값: content-box
+값
+-content-box : 요소가 가질 수 있는 내부 내용을 담는 공간을 기준으로 크기를 지정한다.
+-border-box : 요소의 테두리를 기준으로 크기를 지정한다.
+
+box-shadow 속성은 요소에 그림자를 적용하기 위한 속성이다.
+기본 값 :none
+형태 [오프셋 X] [오프셋 Y] [흐림 반경] [굵기 반경] [색상]
+- [오프셋 X] : 그림자를 가로 방향으로 얼마나 이동시킬지에 대한 크기 값이다.
+- [오프셋 Y] : 그림자를 세로 방향으로 얼마나 이동시킬지에 대한 크기 값이다.
+- [흐림 반경] : 굵기 반경에서 설정한 선을 얼마나 흐릴지에 대한 크기 값이다.
+- [굵기 반경] : 흐림 반경에서 흐리게 할 그림자의 근원이 되는 선의 굵기를 지정하기 위한 크기 값이다.
+- [색상] : 그림자의 색상 값이다.
+
+position 속성은 요소의 위치함에 대한 기준을 지정하기 위한 속성이다.
+기본 값 : static
+값
+-static : 포지셔닝 하지 않음. top, left, bottom, left 속성을 무시한다.
+-relative : 상대적 포지셔닝. 본래 요소의 위치(static 일때의 위치)를 기준으로 움직인다.
+-absolute : 절대적 포지셔닝. position 속성 값이 static이 아닌 가장 가까운 부모(없다면 문서)를 기준으로 움직인다. 추가로 다른 요소의 흐름에 영향을 미치지 않ㄷ는다.
+-fixed : 고정 포지셔닝. 뷰포트를 기준으로 움직인다. 화면에 떠서 움직이며 스크롤에 영향을 받지 않는다. 추가로 다른 요소의 흐름에 영향을 미치지 않는다.
+
+top 속성은 쇼소의 상단 위치를 지정하기 위한 속성이다.
+bottom 속성과 함께 사용하지 않는다.
+값:  크기 리터럴
+bottom
+right
+lft
+
+border 속성은 요소의 테두리를 지정하기 위한 속성이다.
+기본 값 : none
+형태 : [굵기] [스타일] [색상]
+- [굵기] : 테두리 선의 굵기를 위한 크기 값이다.
+- [스타일] : 테두리 선의 형태이며 값은 아래중 하나이다.
+ * dotted : 둥근 점선
+ * dashed : 일반 점선
+ * solid : 실선
+ * double : 이중 실선
+ * groove : 파인 입체 실선
+ * ridge : 돌출 입체 실선
+- [색상] : 테두리 선의 색상을 위한 색상 값이다.
+border-top
+border-right
+border-bottom
+border-left
+border-radius 속성은 요소의 모서리를 둥글게 만들기 위한 속성이다.
+기본 값 : 0
+값: 크기 값
+형태
+- a : 모든 방향에 a를 적용한다.
+- a b : 좌상단, 우하단에 a를, 우상단, 좌하단에 b를 적용한다.
+- a b c d : 좌상단, 우상단, 우하단, 좌하단 순서대로 a, b, c, d를 적용한다.
+border-bottom-left-radius
+border-bottom-right-radius
+border-top-left-radius
+border-top-right-radius
+
+cursor 속성은 마우스 포인터 모양을 지정하기 위한 속성이다.
+기본 값 : auto
+값
+- auto : 브라우저가 사오항에 맞게 알아서 판단한다.
+- none : 마우스 포인터 없음. 권장하지 않음.
+- default : 일반
+- pointer : 클릭모양
+- progress : 마우스+모래시계
+- wait : 모래시계
+- text : 텍스트커서
+- not-allowed : 금지표시
+- zoom-in : 확대모양
+- zoom-out : 축소모양
+- url(x) : 원하는 이미지를 커서로 사용
+
+filter 속성은 흐림이나 색상 변형 등 그래픽 효과를 적용하기 위해 사용한다.
+속성 값은 함수로 이루어져있고 공백으로 구분하여 여러개를 사용할 수 있다.
+기본 값: none
+값
+- none: 효과 없음
+- blur(x) : 크기 값인 x만큼 반경으로 하여 요소를 흐린다.
+- brightness(x) : 비율 값인 x만큼 명도를 지정한다. 100%(혹은 1.0)이 본래 명도이고, 0%(혹은 0.0)으로 지정할 경우 완전히 어두워진다.
+- contrast(x) : 비율 값인 x 만큼 대비를 지정한다. 100%(혹은 1.0)이 본래 대비이고, 0%(혹은 0.0)으로 지정할 경우 완전히 회색이된다.
+- grayscale(x) : 비율 값인 x 만큼 흑백으로 지정한다. x의 범위는 0% (혹은 0.0)부터 100% (혹은 1.0)까지이고, 0%가 본래 이미지이며, 100%가 완전한 흑백이미지이다.
+- hue-rotate(x) : 각도 x 만큼 색조를 회전한다. x의 범위는 0deg부터 360deg까지이고, 360deg를 초과한 경우 0deg부터 다시 순환한다.
+- invert(x) : 비율 값인 x만큼 색상을 반전한다. x의 범위는 0% (혹은 0.0)부터 100% (혹은 1.0)까지이고, 0%가 본래 이미지이며, 100%가 완전한 반전된 이미지가 된다. 사실상 중간 값은 없으며 중간 값 설정시 회색조로 처리된다.
+- opacity(x) : 비율 값인 x 만큼 불투명도를 지정한다. x의 범위는 0% (혹은 0.0)부터 100% (혹은 1.0)까지이고, 100%가 본래 이미지이며, 0%가 되면 완전히 투명해진다.
+- saturate(x) : 비율 값인 x 만큼 채도를 지정한다. 100%가 본래 채도이며, 0%로 지정할 경우 채도가 없는 이미지가 된다.
+- sepia(x) : 비율 값인 x 만큼 세피아톤을 지정한다. x의 범위는 0% (혹은 0.0)부터 100% (혹은 1.0)까지이고, 100%가 되면 완전히 세피아톤이 된다.
+-->

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes anim-qwer {
+            0% { opacity: 1; }
+            10% { opacity: 0; }
+            30% { opacity: 0; }
+            100% { opacity: 1; }}
+
+        .qwer {
+            position: relative;
+            width: 50rem;
+            height: 50rem;
+            overflow: hidden;
+                }
+
+        .qwer > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            animation-duration: 0.1s;
+            animation-iteration-count: infinite;
+            animation-name: anim-qwer;
+            animation-timing-function: linear;
+        }
+
+        .qwer > img:nth-child(2) {
+            animation-delay: 0.03s; /* 첫 번째 이미지가 사라진 후 나타나도록 설정 */
+        }
+
+        .qwer > img:nth-child(3) {
+            animation-delay: 0.06s; /* 두 번째 이미지가 사라진 후 나타나도록 설정 */
+        }
+
+        img:active {
+            animation: paused;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="qwer">
+    <img class="eel" alt="장어"
+         src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzEyMDVfMjI5%2FMDAxNzAxNzA5MzkxNzY3.rtxeKtY2NvvEUAiJndZ3qtqtPBthScBTINEgpgknTYUg.rdE1Uz_IefVLvFwIFSzkdCn6azeoOu4HAyDDBOXT5sgg.JPEG%2F20231204_181730.jpg%3Ftype%3Dw1500_60_sharpen">
+    <img class="bangkok" alt="방콕맨션"
+         src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231203_5%2F1701591662838y0ATc_JPEG%2FKakaoTalk_20231203_172036379.jpg">
+    <img class="soba" alt="소바" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA4MDFfMjk3%2FMDAxNzIyNTIzMDExOTU2.RZ1WvJqTpaCaaWZybDgM1Wov-ITJzzE3b0mwvkLbVAUg.pIf0kb1QUr8FK6TcEpNvOJu4s2CbQFCobSQ_9vxs5Dsg.JPEG%2FIMG_2531.jpeg">
+
+</div>
+</body>
+</html>

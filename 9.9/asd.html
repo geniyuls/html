@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image Overlay Carousel</title>
+  <style>
+    @keyframes slide {
+      0% { transform: translateY(0); }
+      20% { transform: translateY(0); }
+      33% { transform: translateY(-100%); }
+      53% { transform: translateY(-100%); }
+      66% { transform: translateY(-200%); }
+      86% { transform: translateY(-200%); }
+      100% { transform: translateY(-300%); }
+    }
+
+    .carousel {
+      position: relative;
+      width: 50rem;
+      height: 50rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .carousel-inner {
+      position: absolute;
+      width: 100%;
+      height: 400%; /* Adjust to accommodate all images */
+      display: flex;
+      flex-direction: column;
+      animation: slide 9s infinite; /* Adjust duration as needed */
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel.paused .carousel-inner {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body>
+<div class="carousel" id="carousel">
+  <div class="carousel-inner">
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzEyMDVfMjI5%2FMDAxNzAxNzA5MzkxNzY3.rtxeKtY2NvvEUAiJndZ3qtqtPBthScBTINEgpgknTYUg.rdE1Uz_IefVLvFwIFSzkdCn6azeoOu4HAyDDBOXT5sgg.JPEG%2F20231204_181730.jpg%3Ftype%3Dw1500_60_sharpen" alt="장어">
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231203_5%2F1701591662838y0ATc_JPEG%2FKakaoTalk_20231203_172036379.jpg" alt="방콕맨션">
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA4MDFfMjk3%2FMDAxNzIyNTIzMDExOTU2.RZ1WvJqTpaCaaWZybDgM1Wov-ITJzzE3b0mwvkLbVAUg.pIf0kb1QUr8FK6TcEpNvOJu4s2CbQFCobSQ_9vxs5Dsg.JPEG%2FIMG_2531.jpeg" alt="소바">
+  </div>
+</div>
+<script>
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('click', () => carousel.classList.toggle('paused'));
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    background-color: #f0f2f4;
+    box-sizing: border-box;
+    color: black;
+}
+
+main > .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > .login > .loginform {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 2rem 2rem 2rem;
+    gap: 0.3rem;
+    box-shadow: 0.02rem 0.02rem 0.01rem 0.01rem #15151530;
+
+    background-color: #ffffff;
+}
+
+main > .login > .loginform:hover {
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #15151530;
+}
+
+main > .login > .loginform > label {
+    width: 100%;
+}
+
+main > .login > .loginform > label > .email {
+    border-radius: 0.3rem;
+    width: calc(100% - 1rem);
+    font-size: 0.8rem;
+    padding: 0.8rem 0 0.8rem 1rem;
+    border: 0.1rem solid #f0f2f4;
+    outline: none;
+    color: inherit;
+}
+
+main > .login > .loginform > label > .email:hover {
+    border: 0.1rem solid #a6a2a2;
+}
+
+main > .login > .loginform > label > .email:focus {
+    border: 0.1rem solid black;
+}
+
+main > .login > .loginform > label > .password {
+    border-radius: 0.3rem;
+    width: calc(100% - 1rem);
+    font-size: 0.8rem;
+    padding: 0.8rem 0 0.8rem 1rem;
+    border: 0.1rem solid #f0f2f4;
+    outline: none;
+    color: inherit;
+}
+
+main > .login > .loginform > label > .password:hover {
+    border: 0.1rem solid #a6a2a2;
+}
+
+main > .login > .loginform > label > .password:focus {
+    border: 0.1rem solid black;
+}
+
+main > .login > .loginform > .button {
+    width: 100%;
+
+}
+
+main > .login > .loginform > .button > button {
+
+    width: 100%;
+    background-color: #1e90ff;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+main > .login > .loginform > div > .membership, .missing{
+    text-decoration: none;
+}
+
+main > .login > .loginform > div > .membership:hover {
+    text-decoration: underline;
+}
+main > .login > .loginform > div > .missing:hover {
+    text-decoration: underline;
+}

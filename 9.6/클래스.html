@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*span {*/
+        /*    color: red;*/
+        /*}*/
+
+        span:active {
+            color: blue;
+        }
+
+        /* 마우스로 눌러야 파란색이됨*/
+        a {
+            color: white;
+        }
+
+        span:active + a {
+            color: black;
+        }
+
+        span:hover + a {
+            color: black;
+        }
+
+            /*마우스 올렸을 때*/
+        /*span {*/
+        /*    color: #e74c3c;*/
+        /*}*/
+
+        input[type="checkbox"]:checked + span {
+            color: #2ecc71;
+        }
+
+        /*
+         ↓유형성택자            ↓의사 클래스
+        input[type="checkbox"]:checked + span {
+               ↑특성 선택자         ↑체크된 상태
+            color: #2ecc71;
+        }*/
+        /*   input 태그인데, type 속성값이 checkbox인 것이 체크된 상태의 인접한 span태그 */
+        /*input:disabled {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*input:enabled,*/
+        /*span:enabled {*/
+        /*    color: blue;*/
+        /*}*/
+
+        /*   *:disabled {color: red} 모든 태그의 disabled 상태인 것은 전부 red*/
+        /**:focus {color:red;} 누르면 켜짐*/
+
+        /*label:focus-within {*/
+        /*    background-color: #fe6060;*/
+
+        /*}*/
+        /*div > a:first-child {*/
+        /*    color: red;*/
+        /*}*/
+        /*<div>
+           <span>스팬1</span>
+           <a>a1</a>
+           <span>스팬2</span>
+           <a>a2</a>
+       </div> 에서 첫번째 자식은 span이므로 활성화 x */
+
+        /*div > a:last-child {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*div > a:first-of-type {
+            color: red;
+        }
+        div 자식 a중 첫번째 a  */
+        table > thead > tr:nth-child(even) {
+            background-color: red;
+        }
+
+        /*table > thead > tr:not(:lst-child) {
+            background-color: red;
+        } 첫번째꺼 빼고*/
+    </style>
+
+</head>
+<body>
+
+<span>Play with me</span>
+<a>눌렀구나?</a>
+<label>
+    <input type="checkbox">
+    <span>위 이용약관 및 개인정보처리방침을 읽어보았고 이해하며 동의합니다.</span>
+</label>
+<input disabled type="text" value="비활성 상태">
+<input type="text" value="활성 상태">
+<span>이건 뭐고1</span>
+<span disabled>이건 뭐고2</span>  <!--span에는 disabled 하지못함.-->
+<label>
+    <input type="text">
+    <span>여긴 label 영역</span>
+    <span>여기도 label 영역</span>
+</label>
+
+<div>
+    <span>스팬1</span>
+    <a>a1</a>
+    <span>스팬2</span>
+    <a>a2</a>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <td>
+            sksssk
+        </td>
+        <td>
+            sksssk
+        </td>
+    </tr>
+    <tr>
+        <td>
+            sksssk
+        </td>
+        <td>
+            sksssk
+        </td>
+    </tr>
+    </thead>
+</table>
+</body>
+</html>
+
+<!--
+의사 클래스(가상 클래스, Pseudo Class)는 요소의 상태나 상황에 따라 선택자를 구분하기 위해 사용한다.
+의사 클래스는 어떠한 선택자 뒤에 콜론(:)과 의사 클래스 이름을 붙여 사용한다.
+의사 클래스의 종류는 다음과 같다.
+- active: 활성(마우스를 누르고 있는)상태
+- hover : 마우스가 올라가 있는 상태
+- checked : input 태그의 type 속성값이 checkbox 혹은 radio 일때 해당 태그가 체크되어 있을때의 상태
+- disabled : 태그가 비활성화되어 있는 (disabled 속성이 있는) 상태
+- enabled : 태그가 활성화되어 있는 *disabled 속성이 없는) 상태
+- focus : 태그가 포커스를 가지고 있는 상태. 단, 포커스를 가질 수 있는 태그만을 대상으로 한다.
+- focus-within : 자기 스스로 혹은 자식/자손 중 하나가 포커스를 가지고 있는 상태.
+- first-child : 첫번째 자식이면서 선행  선택자를 만족하는 상태
+- first-of-type : 찾을 수 있는 첫번째 유형
+- last-child : 마지막 자식이면서 선행 선택자를 만족하는 상태
+- nth-child(x) : x번쨰 자식이면서 선행 선택자를 만족하는 상태. x에 사용할 수 있는 값은 아래와 같다.
+ * 숫자: 순번을 의미하며 1부터 시작한다.
+ * even: 짝수번째를 의미한다. (2,4,6,...)
+ * odd : 홀수번째를 의미한다. (1,3,5,...)
+- nth-of-type(x) : 찾을 수 있는 x 번째 유형. x에 사용할 수 있는 값은 아래와 같다.
+ * 숫자: 순번을 의미하며 1부터 시작한다.
+ * even: 짝수번째를 의미한다. (2,4,6,...)
+ * odd : 홀수번째를 의미한다. (1,3,5,...)
+- readonly : 태그가 읽기 전용(readonly 속성이 있는)상태. 단, 입력 가능한 태그(가령 input)만을 대상으로 한다.
+- read-write : 태그가 읽기 전용이 아닌(readonly 속성이 없는)상태. 단, 입력 가능한 태그(가령 input등)만을 대상으로 한다.
+- required : 태그가 필수인 (required 속성이 있는)상태. 단, 입력 가능한 태그가(가령 input 등)만을 대상으로 한다.
+- scope : 성행하는 선택자(혹은 변수)에 의해 선택되는 요소를 참조하기 위한 가상의 포인트.CSS가 아닌 자바스크립트에서 사용하기 위해 존재한다.

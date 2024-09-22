@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*body{ background-image : linear-gradient(45deg, red, blue);}*/
+        body { background-position: top left;}
+        div {
+            width: 1200px;
+            height: 600px;
+            background-color: red;
+            background-image: url("https://cdn.thelec.kr/news/photo/202405/27561_25621_137.png");
+            background-repeat : no-repeat;
+            background-position : center; /*background-position : bottom right;*/
+        }
+    </style>
+</head>
+<body>
+
+<div>asdfsadfsdafasdfasdfsadgfasdfgasdfgadsfgsdfasdfsadfsadfsadfsadfsadfsdfsadfsdafasdf</div>
+
+</body>
+</html>
+
+<!--
+background-color 속성은 배경 색상을 지정하기 위해 사용한다.
+값
+-색상값
+
+background-image 속성은 배경 이미지를 지정하기 위해 사용한다.
+값
+-none: 배경 이미지 없음
+-ulr(x):여기서 x값은 배경이미지로 사용할 리소스의 주소나 경로 문자열
+-linear-gradient(d, c1, c1f, c1t, c2, c2f, c2t): 선형 그라디언트 이미지를 생성한다. 각 매개 변수는 아래와 같다.
+ * d : 그라디언트 각도
+ * c1 : 색상 1의 색상 값
+ * c1f : 색상 1이 차지할 시작 비율(%)
+ * c1t : 색상 1이 차지할 끝 비율(%)
+ * c2 : 색상 2의 색상 값
+ * c2f : 색상 2가 차지할 시작 비율(%)
+ * c2t : 색상 2가 차지할 끝 비율(%)
+ * 각 색상의 시작값을 생략할 경우, 첫 색상일 경우 0% 를, 두번째 색상부터는 앞 색상의 끝점을 사용한다.
+ * 색상은 두 개뿐 아니라 여러 개를 사용할 수도 있다.
+ * 해당 함수를 콤마(,)f로 구분하여 여러개 사용할 수 있다.
+
+background-position은  background-image 속성에 의해 설정된 배경 이미지의 위치를 지정하기 위한 속성이다.
+기본 값: top left
+값
+- top
+-right
+-bottom
+-left
+-center
+형태
+-a: 지정되지 않은 나머지 방향에 대한 위치를 center로 지정한다. 가령, top이라고 작성할 경우 top center가, left 라고 작성할 경우 left center가 된다.
+-a b: 순서 상관 없이 값을 적용할 수 있따. 단, 상충되는 값(가령, top과 bottom 및 left와 right)을 함께 적지 않는다.
+
+background-repeat속성은 background-image 속성에 의해 설정된 배경 이미지의 반복과 관련된 설정을 하기 위한 속성이다.
+기본 값 : repeat
+값
+- repeat : 가로 및 세로 방향으로 반복함
+- repeat-x : 가로 방향으로만 반복함
+- repeat-y : 세로 방향으로만 반복함
+- no-repeat : 반복하지 않음.
+- space : 양 끝에 위치 후 남는 공간에 균등하게 반복한다.
+형태
+- a
+ * repeat, no-repeat, space : 가로, 세로 방향에 대해 적용
+ * repeat-x : 가로 방향 반복, 세로 방향 반복하지 않음.
+ * repeat-y : 세로 방향 반복, 가로 방향 반복하지 않음
+- a b : 각 순서대로 a는 가로축, b는 세로축에 대한 설정. 단, repeat-x와 repeat-y 값을 대입하지 않는다. 즉, repeat no-repeat의 형태로 값을 할당할 경우 가로축은 반복, 세로축은 반복하지 않는다.
+
+background-size 속성은 background-image 속성에 의해 설정된 배경 이미지의 크기와 관련된 설정을 위한 속성이다.
+가본 값 : auto
+값
+-auto : 이미지가 본래 가지는 크기로 설정.
+-contain : 배경 이미지를 담고 있는 요소 내에서 배경 이미지를 자르거나 비율을 변경하지 않고 표현할 수 있는 가장 큰 크기로 지정한다.
+-cover : 배경 이미지를 담고 있는 요소의 빈부분이 보이지 않을 범위 내에서 비율을 변경하지 않고 표현할 수 있는 가장 작은 크기로 지정한다.
+-크기 리터럴 : 설정한 크기로 지정한다. 단, 해당 크기 리터럴이 비율값(%)일때 배경 이미지를 포함하는 요소 크기에 대한 비율로 지정한다. 즉, 100%로 지정하면 요소의 크기와 같아진다.
+형태
+-a : a가 크기 리터럴일때 배경 이미지의 가로 크기를 지정한다. 이때, 세로 크기는 이미지의 비율을 훼손하지 않는 비율에 따라 자동 조정된다.
+-a b: a와 b가 크기 리터럴일때 각 a와 b는 가로크기와 세로크기로 지정된다. 이때, 이미지의 비율이 훼손될 수 있다. 이 때, a 값은 cover이거나 contain일 수 없다.
+-auto a: a가 크기 리터럴일때 배경 이미지의 세로 크기를 지정한다. 이때 가로 크기는 이미지의 비율이 훼손되지 않는 비율에 따라 자동 조정된다. 이 때, a 값은 cover이거나 contain일 수 없다.
+-->

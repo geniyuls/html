@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>button, form, input, label, optgroup, option, select, textarea 태그</title>
+</head>
+<body>
+<button disabled>submit</button>
+<button type="submit">submit</button>
+<button type="button">button</button>
+<button type="reset">reset</button>
+
+<form>
+    <button type="submit">submit</button>
+    <button type="button">button</button>
+    <button type="reset">reset</button>
+</form>
+<form>
+    <label>
+        이메일 <input name="em" type="text">
+    </label>
+    <div></div>
+    <label>
+        비밀번호<input name="pw" type="text">
+    </label>
+    <div></div>
+    <input type="submit" value="로그인">
+    <div></div>
+    <button type="submit">
+        <img src="data:" alt=";" style="width: 1rem;">
+        로그인
+    </button>
+</form>
+<div></div>
+<label>
+    <input name="remember" type="checkbox">이메일을 기억할까요?
+</label>
+<label>
+    피부톤 <input type="color">
+</label>
+<br>
+<label>
+    생년월일 <input type="date" value="2000-01-01">
+</label>
+<br>
+<label>
+    희망 상담 일시 <input type="datetime-local">
+</label>
+<br>
+<label>
+    이메일 주소 <input readonly placeholder="이메일을 입력해 주세요." type="email">
+</label>
+<br>
+<label>
+    프로필 사진<input multiple type="file">
+</label>
+<br>
+a<input type="hidden">b
+<br>
+<label>
+    아이디<input maxlength="10" spellcheck="false" type="text">
+</label>
+<br>
+<label>
+    인증번호<input max="999999" min="000000" type="number">
+</label>
+<br>
+<label>
+    OTP<input maxlength="5" type="password">
+</label>
+<br>
+<label>
+    통신사
+    <input name="telecom" type="radio">SKT
+    <input name="telecom" type="radio">KT
+    <input name="telecom" type="radio">LGU+
+</label>
+<br>
+<label>
+    한도 조정 <input min="10" max="100" step="10" type="range" value="10">
+</label>
+<br>
+<label>
+    검색어 입력 <input type="search">
+</label>
+<br>
+<label>
+    연락처 <input autofocus type="tel">
+</label>
+<br>
+<label for="someCheck">
+    체크하세요
+</label>
+<br>
+a<br>
+b<br>
+c<br>
+d<br>
+e<br>
+<label>
+    <input id="someCheck" type="checkbox">
+</label>
+<br>
+<form>
+    <select name="region">
+        <optgroup label="대구광역시">
+            <option value="0531"> 대구광역시 군위군</option>
+            <option value="0532"> 대구광역시 남구</option>
+            <option value="0533"> 대구광역시 달서구</option>
+            <option value="0534"> 대구광역시 달성군</option>
+            <option value="0535"> 대구광역시 동구군</option>
+            <option value="0536"> 대구광역시 북구군</option>
+            <option value="0537"> 대구광역시 서구</option>
+            <option value="0538"> 대구광역시 수성구</option>
+            <option value="0539"> 대구광역시 동구</option>
+        </optgroup>
+        <option> 대전광역시 대덕구</option>
+        <option> 대전광역시 서구</option>
+        <option> 대전광역시 유성구</option>
+        <option> 대전광역시 중구</option>
+    </select>
+    <textarea></textarea>
+    <button type="submit">제출</button>
+</form>
+
+</body>
+</html>
+
+<!--
+
+button 태그는 버튼을 위한 태그
+자동으로 닫는 태그x
+시멘틱 o
+속성
+-disabled: 해당 태그를 비활성화 한다.
+-type : 버튼의 동작 방식을 설정한다.
+ * submit : [기본값]속해있는 양식 태그를 제출한다
+ * button : 아무런 기능이 없는 일반 버튼이다.
+ * reset : 속해있는 양식 태그가 가지고 있는 입력 태그들의 값을 초기화한다.
+
+form(양식) 태그는 서버로 전송하고자 하는 사용자 입력 값을 받는 입력 태그들을 자식 혹은 자손으로 가지는 태그이다.
+자동으로 닫는 태그x
+시멘틱 o
+하나의 양식 태그는 서로 관련있는 입력 태그만 가져야 한다.
+양식 태그 끼리는 선조, 부모, 자식, 자손 관계를 형성해서는 안된다.
+
+input 태그는 사용자로부터 입력 값을 받기 위해 사용하는 태그
+자동으로 닫는 태그 o
+시멘틱 o
+속성
+-name[필수] : 가지고 있는 값을 서버로 전송할때 사용할 식별자이다. 특별한 경우가 아니라면 해당 양식 내에서 고유해야 한다.
+-type[필수] : 해당 입력 태그의 종류를 지정한다.
+ * text : [기본값] 특성이 없는 일반 문자열이다.
+ * button : 아무런 기능이 없는 버튼으로 작동 <button type="button">... </button>과 동일하게 작동한다. 표시할 텍스트는 value 속성으로 지정한다.
+ * checkbox : 여부(참, 거짓)값을 가지기 위한 체크박스
+ * color : 색상을 선택하기 위해 사용한다. 데이터 전송시 HEX 컬러 문자열로 전송된다.
+ * date : 날짜를 선택하기 위해 사용한다.
+ * datetime-local : 날짜 및 시간을 선택하기 위해 사용한다.
+ * email : 이메일 문자열을 입력 받기 위해 사용한다.
+ * file : 파일을 입력 받기 위해 사용한다. 주로 첨부 파일 기능을 구현하기 위해 많이 사용하고 아래 요건을 만족해야 한다.
+   이를 포함하는 양식태그의 enctype 속성 값이 multipart/form-data 여야한다.
+   이를 포함하는 양식 태그의 method 속성 값이 post 이어야 한다.
+ * hidden : 숨겨진 입력 태그를 위해 사용한다. 주로, 서버로 전송은 되어야 하나 사용자가 직접 적는 값 이 아닌(Salt 값 등)것들을 포함하기 위해 사용한다.
+ * number : 숫자 값을 입력받기 위해 사용한다.
+ * password : 비밀번호를 입력받기 위해 사용한다. 입력된 값이 가려진다.
+ * radio :  여러 선탁지 중 하나를 선택할 수 있게 하기 위해 사용한다. name 속성 값이 같은 radio 중 하나만 선택할 수 있다.
+ * range : 숫자를 선택하기 위해 사용하는 막대 형식이다.
+ * search : 검색 키워드를 입력받기 위해 사용한다. 외관상 text 인 것과 크게 차이는 없지만 검색을 위한 입력 태그임을 알리는 시멘틱에 의미가 있다.
+ * reset : 속해있는 양식 태그가 가지고 있는 입력 태그들의 값을 초기화한다.  <button type="button">... </button>과 동일하게 작동한다. 표시할 텍스트는 value 속성으로 지정한다
+ * submit : 아무런 기능이 없는 버튼으로 작동. <button type="submit">...</button>과 동일하게 작동한다. 표시할 텍스트는 value 속성으로 지정한다.
+ * tel : 연락처를 입력받기 위해 사용한다.
+ * URL : 인터넷 주소 및 경로를 입력받기 위해 사용한다.
+  ※input 에서 사용할 수 있는 중요한 type
+    -text ☆
+    -checkbox ☆
+    -date
+    -email ☆
+    -number
+    -password ☆
+ - autocomplete 자동 완성 기능을 사용할 것인가에 대한 설정
+  * on : 일반적인 자동 완성 기능을 사용한다. 해당 입력 태그에 입력한적이 있떤 값을 기반으로 한다.
+  * off : 자동완성 기능을 사용하지 않는다.
+  * email : 사용자의 이메일에 한해서 자동 완성 기능을 사용한다.
+  * name : 사용자의 이름에 한해서 자동 완성 기능을 사용한다.
+  * new-password : 신규 비밀번호 자동 완성 기능을 사용한다.
+  * one-time-code : 일회용 비밀번호(OTP) 자동 완성 기능을 사용한다.
+ - autofocus : 페이지가 로드되었을 때 해당 입력 태그에 자동으로 포커스를 줄 것인가에 대한 설정. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+ - checked : type 속성 값이 checkbox 혹은, radio 일때 체크된 상태로 만들기 위해 사용한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+ - disabled : 해당 태그를 비활성화한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+ - max : type 속성 값이 number 혹은 range 등 일때 가질 수 있는 최댓값인 숫자
+ - max : type 속성 값이 number 혹은 range 등 일때 가질 수 있는 최솟값인 숫자
+ - maxlength : 문자열의 최대 길이
+ - maxlength : 문자열의 최소 길이
+ - multiple : type 속성 값이 file 일때, 여러개의 파일을 선택할 수 있게 한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+ - placeholder : 값이 비어있을때 대신하여 보여줄 안내 텍스트를 지정한다.
+ - readonly : 읽기 전용으로 지정하기위해 사용한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+ - required : 값이 비어있을 수 없음을 의미한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다. (필수 필드)
+ - spellcheck : 브라우저에 내장되어있는 절차 확인 기능을 사용할 것인가에 대한 설정.
+  * default : [기본값]브라우저의 설정에 따른다.
+  * ture : 강제사용
+  * false :강제 미사용
+ - step : type 속성 값이 range 일때 한틱(Tick)에 변화할 단계 값.
+ - value : 해당 입력 태그의 값을 지정한다. 단, 버튼 형식(button, reset, submit)일때는 표시할 텍스트로 작동한다.
+
+label 태그는 입력태그와 관련하여 이에 관한 설명을 작성하고 연결시키기 위해 사용한다.
+자동으로 닫는 태그 x
+시멘틱 o
+label 태그는 연결된 입력 태그에 대한 설명을 문자열로 가지며, 스키린 리더가 연결된 태그에 대한 설명으로 해당 내용을 사용한다.
+작성 방법은 아래와 같다.
+ - label 태그가 직접 입력태그를 자식 혹은 자손으로 가지게 하는 방법
+  * <label>
+        <span>이메일</span>
+        <input autofocus required autocomplete="email" maxlength=:50: minlength=10" name="email" placeholder="이메일을 입력해 주세요." spellcheck="false" type="email">
+ - label 태그의 for 속성 값을 입력 태그가 가지는 id 속성 값과 일치시키는 방법.
+   * <label for "emailInput">
+        <span>이메일</span>
+     </label>
+        <input autofocus required autocomplete="email" id="emailInput" maxlength=:50: minlength=10" name="email" placeholder="이메일을 입력해 주세요." spellcheck="false" type="email">
+     ※ id 속성 값은 하나의 HTML 문서내에서 고유해야하기 떄문에 각별히 유의한다.
+
+select 태그는 드롭다운(Drop Down) 방식 혹은 리스트(List)방식의 항목 선택을 위한 입력태그이다.
+자동으로 닫는 태그 x
+시멘틱 o
+select 태그는 직접 값을 가지지 않으며, 자식 혹은 자손으로 값을 가지는 option 태그를 가진다.
+속성
+- name:[필수]가지고 있는 값을 서버로 전송할때 사용할 식별자이다. 특별한 경우가 아니라면 해당 양식내에서 고유해야 한다.
+- autofocus : 페이지가 로드되었을 때 해당 입력 태그에 자동으로 포커스를 줄 것인가에 대한 설정, 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+- disabled : 해당 태그를 비할성하한다. ㅅㄱ성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+- multiple : 여러개의 option 을 선택할 수 있게 한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+- required : 값이 비어있을 수 없음을 의미한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다. (필수 필드)
+
+option 태그는 select 태그가 가지는 실질적인 값이 있는 항목 태그이다.
+자동으로 닫는 태그x
+시멘틱 o
+속성
+-disabled : 해당 태그를 비활성화한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+-selected : 해당 선택지를 초기에 선택된 상태로 지정한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+-value : 실질적으로 서버에서 전송될 값이다. 생략할 경우 해당 태그가 가지는 내용으로 대체된다.
+
+
+optgroup
+option group 태그는 서로 관련있는 option 태그를 묶어내기 위해 사용한다.
+자동으로 닫는 태그x
+시멘틱 o
+하나 이상의 option 태그가 서로 관련이 있음을 알리는 시멘틱이 있기는 하나, 선택이 불가한 항목이고, 시각적 외의 특별한 기능을 가지지는 앖는다.
+select 태그의 자식이어야하고, 자식으로 option 태그를 가진다.
+속성
+- label [필수} 표시할 텍스트를 지정한다.
+- disabled 해당 태그를 비활성화한다. 단, optgroup 태그가 가지고 있는 option 태그들도 함께 비활성화 된다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+
+textarea 태그는 개행이 가능한 문자열 값을 입력받기 위한 태그다.
+자동으로 닫는 태그 x
+시멘틱 o
+초기값을 기정하기 위해서는 input 에서 value 를 지정했떤거와 달리, 태그의 내부 내용을 작성하면 된다.
+속성
+-name : [필수] 가지고 있는 값을 서버로 전송할때 사용할 식별자이다. 특별한 경우가 아니라면 해당 양식 내에서 고유해야한다.
+-autocomplete : 자동 완성기능을 사용할 것인가에 대한 설정
+ * on : 일반적인 자동 완성 기능을 사용한다. 해당 입력 태그에 입력한 적이 있떤 값들을 기반으로 한다.
+ * off : 자동 완성 기능을 사용하지 앖는다.
+ *autofocus 페이지가 로드되었을 때 해당 입력 태그에 자동으로 포커스를 줄 것인가에 대한 설정, 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+ * cols :  초기에 설정될 열의 개수(가로방향으로의 글자 개수)를 지정한다. 자연수여야 하며 기본 값은 20이다.
+ * disabled : 해당 태그를 비활성화한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+ * maxlength : 문자열의 최대 길이
+ * minlength : 문자열의 최소 길이
+ * placeholder : 값이 비어 있을 때, 대신하여 보여줄 안내 텍스트를 지정한다.
+ * readonly : 읽기 전용으로 지정하기위해 사용한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다.
+ * required : 값이 비어있을 수 없음을 의미한다. 속성 값을 가지지 않으며 부여된 것으로 그 의미를 가진다. (필수 필드)
+ * rows : 초기에 설정될 행의 개수(세로방향으로의 글자 개수)를 지정한다. 자연수여야 하며 기본 값은 2이다.
+ * spellcheck : 브라우저에 내장되어 있는 절차 확인 기능을 사용할 것인가에 대한 설정
+  - default: [기본값] 브라우저의 설정에 따른다.
+  - true : 강제 사용
+  - false : 강제 미사용
+
+html -> 존재, 구조
+<handel></handle>
+css -> 모양
+<style>
+    handle {
+        width: 10rem;
+        height: 10rem;
+        background-color: blue;
+        border-radius: 50%
+        display: block;
+    }
+<style>
+js -> 이벤트, 로직
+   -> ~했을때 ~한다.
+
+-->
